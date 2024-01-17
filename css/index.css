@@ -1,0 +1,270 @@
+:root{
+    --principal: rgb(249, 38, 38);
+    --segundo: #0097A7;
+    --blanco: #ffffff;
+    --negro: #212121;
+    --gris: #757575;
+    --degradado: #dfe9f3;
+    --tamaño-fuente-principal: 3.8rem;/*==> 38px*/
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    background-image: linear-gradient(to top, var(--degradado) 0%, var(--blanco) 100%) ;
+    scroll-snap-type: y mandatory;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px; /*1rem=10px*/
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-size: var(--tamaño-fuente-principal);
+}
+
+h2{
+    font-size: 2.8rem;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+.titulo span{
+    font-size: 2rem;
+    color: var(--principal) !important;
+} 
+
+
+.content{
+    max-width: 120rem;
+    margin: 0 auto ;
+}
+
+.button{
+    background-color: var(--segundo);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+@media (min-width: 480px) {
+    .button{
+        width: auto;
+
+    }
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+.sombra{
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(115,108,115,0.76);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(115,108,115,0.76);
+    box-shadow: 0px 5px 10px 0px rgba(115,108,115,0.76);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.back-menu{
+    background-color: var(--segundo);   
+}
+
+.menu-principal{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .menu-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.menu-principal a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.menu-principal a:hover{
+    background-color: var(--principal);
+    color: var(--negro);
+}
+
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 410px;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.content_hero{
+    position: absolute;
+    background-color: rgb(0 0 0 /70%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.content_hero h2, .content_hero p{
+    color: var(--blanco);
+}
+
+.content_hero svg{
+    color: var(--principal);
+}
+
+.servicios, .menu-principal, .form{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+
+@media (min-width: 768px) {
+     .servicios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem ;
+     }
+}
+
+.titulo_servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo_servicio h3{
+    color: var(--segundo);
+    font-weight: 700;
+}
+
+.titulo_servicio p{
+    line-height: 2;
+    text-align: center;
+}
+
+.titulo_servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--principal);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.form{
+    background-color: var(--gris);
+    width: min(60rem, 100%);/*utiliza el valor mas peque*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.form fieldset{
+    border: none;
+}
+
+.form legend{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--principal);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+@media (min-width: 768px) {
+    .contenedor_campos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+
+    .campos:nth-child(3), .campos:nth-child(4){
+        grid-column: 1/3;
+    }
+}
+
+
+.campos{
+    margin-bottom: 1rem;
+}
+
+.campos label{
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--blanco);
+    display: block;
+}
+
+.campos input[type="text"], .campos input[type="tel"], .campos input[type="email"], .campos textarea{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.campos textarea{
+    height: 20rem;;
+}
+
+.enviar .button{
+    width: 100%;
+}
+
+.footer{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
